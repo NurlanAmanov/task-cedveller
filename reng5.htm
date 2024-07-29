@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 10vh auto;
+            font: 1.3em arial;
+        }
+
+        td {
+            border: 5px solid black;
+            text-align: center;
+            font: 1.2em;
+            height: 100px;
+            width: 100px;
+        }
+
+        .yasil {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table"></table>
+    <script>
+        const table = document.getElementById('table')
+        let kod = ''
+      
+        for (let i = 1; i <= 4; i++) {
+            kod += '<tr>'
+            for (let j = 1; j <= 4; j++) {
+                let reng = (i == 1 || j == 1) ? 'yasil' :
+                (i==4|| j==4) ? 'yasil':''
+
+
+                    kod += `<td class="${reng}"></td>`
+            }
+        }
+        kod += "</tr>"
+        table.innerHTML = kod
+    </script>
+</body>
+
+</html>

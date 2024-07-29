@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border-collapse: collapse; font:1.2em arial;margin: 10vh auto;}
+        td{border: 1px solid black; text-align:center;font: 1em Arial;width: 100px;height: 100px;}
+    </style>
+</head>
+<body>
+    <table id="table"></table>
+    <script>
+        const table=document.getElementById('table')
+        let kod=''
+        for(let i=1;i<=4;i++){
+            kod+='<tr>'
+                for(let a=1;a<=5;a++){
+                    kod+=`<td>${a}</td>`
+                }
+                kod+='</tr>'
+        }
+        table.innerHTML=kod
+    </script>
+</body>
+</html>
